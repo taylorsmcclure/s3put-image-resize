@@ -1,0 +1,16 @@
+{
+  "name": "image-resize-thumbnail",
+  "version": "1.0.0",
+  "description": "S3 Put Object Image resize to thumbnail",
+  "readme": "S3 Put Object Image resize to thumbnail",
+  "repository": "https://github.com/taylorsmcclure/s3put-image-resize",
+  "license": "MIT",
+  "main": "index.js",
+  "dependencies": {
+    "async": "^2.6.0",
+    "gm": "^1.23.0"
+  },
+  "devDependencies": {
+    "aws-sdk": "^2.36.0"
+  }
+}
