@@ -65,9 +65,10 @@ exports.handler = function(event, context, callback) {
             });
         },
         function upload(contentType, data, next) {
-            // Stream the transformed image to a different S3 bucket.
+            // Stream the transformed to thumbs/images/* folder.
             s3.putObject({
                     Bucket: bucket,
+                    ACL: 'public-read',
                     Key: dstKey,
                     Body: data,
                     ContentType: contentType
