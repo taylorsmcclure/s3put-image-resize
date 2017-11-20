@@ -9,7 +9,7 @@ package: image
 	docker run --rm --volume ${PWD}/lambda:/build amazonlinux:nodejs npm install --production
 
 dist: package
-	cd lambda && zip -FS -q -r ../dist/function.zip *
+	cd lambda && zip -FS -q -r ../build/function.zip *
 
 clean:
 	rm -r lambda/node_modules
