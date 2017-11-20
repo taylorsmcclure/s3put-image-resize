@@ -79,13 +79,13 @@ exports.handler = function(event, context, callback) {
             if (err) {
                 console.error(
                     'Unable to resize ' + bucket + '/' + srcKey +
-                    ' and upload to ' + bucket + '/thumbs/' + dstKey +
+                    ' and upload to ' + bucket + dstKey +
                     ' due to an error: ' + err
                 );
             } else {
                 console.log(
                     'Successfully resized ' + bucket + '/' + srcKey +
-                    ' and uploaded to ' + bucket + '/thumbs/' + dstKey
+                    ' and uploaded to ' + bucket + dstKey
                 );
             }
 
