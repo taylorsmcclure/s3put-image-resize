@@ -19,7 +19,10 @@ exports.handler = function(event, context, callback) {
     // Object key may have spaces or unicode non-ASCII characters.
     var srcKey    =
     decodeURIComponent(event.Records[0].s3.object.key.replace(/\+/g, " "));
-    var dstKey    = "thumbs/" + srcKey;
+    var tmpArr = srcKey.split("/");
+    tmpArr = tmpArr.slice(1);
+    var tmpKey = tmpArr.join("/");
+    var dstKey    = "thumbs/" + tmpKey;
 
     // Infer the image type.
     var typeMatch = srcKey.match(/\.([^.]*)$/);
